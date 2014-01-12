@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1389536662 source:/home/alin/Desktop/Prep/PrepApp/main.cpp
+	<iostream>
+	"assert.h"
+	"HashTable.h"
+	"SimpleLinkedList.h"
+	"Stack.h"
+	"Queue.h"
+	"BinarySearchTree.h"
+
+1389219345 source:/home/alin/Desktop/Prep/PrepApp/HashTable.cpp
+	"HashTable.h"
+
+1389218056 /home/alin/Desktop/Prep/PrepApp/HashTable.h
+	<cstring>
+	<iostream>
+
+1389393924 /home/alin/Desktop/Prep/PrepApp/SimpleLinkedList.h
+	<iostream>
+
+1389391341 /home/alin/Desktop/Prep/PrepApp/Stack.h
+	<iostream>
+
+1389391440 /home/alin/Desktop/Prep/PrepApp/Queue.h
+	<iostream>
+
+1389538366 /home/alin/Desktop/Prep/PrepApp/BinarySearchTree.h
+	<iostream>
+
