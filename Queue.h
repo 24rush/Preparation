@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 using namespace std;
 
@@ -45,7 +47,40 @@ public:
 
         delete oldBegin;
 
+        if (_queueBegin == NULL)
+        {
+            _queueEnd = NULL;
+        }
+
         return valDeque;
+    }
+
+    T Peek()
+    {
+        if (_queueBegin == NULL)
+           throw std::exception();
+
+        return _queueBegin->value;
+    }
+
+    bool Empty()
+    {
+        return _queueBegin == NULL;
+    }
+
+    void Print()
+    {
+        if (_queueBegin == NULL)
+            cout << "Queue is empty" << endl;
+
+        auto p = _queueBegin;
+        while (p)
+        {
+            cout << p->value << " ";
+            p = p->next;
+        }
+
+        cout << endl;
     }
 
 private:

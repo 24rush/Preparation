@@ -126,6 +126,8 @@ public:
         };
 
         traverseInOrderDo(_treeRoot, printFunc);
+
+        cout << endl;
     }
 
 private:
