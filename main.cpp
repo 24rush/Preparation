@@ -99,8 +99,9 @@ void SortingTest()
     cout << "Sorting " << endl;
     int a[] = {5, 3, 1, 2, 4, 0};
 
-    SelectionSort(a, sizeof(a) / sizeof(a[0]));
-    MergeSort(a, 0, sizeof(a) / sizeof(a[0]) - 1);
+    //SelectionSort(a, sizeof(a) / sizeof(a[0]));
+    //MergeSort(a, 0, sizeof(a) / sizeof(a[0]) - 1);
+    HeapSort(a, sizeof(a)/sizeof(a[0]));
 
     for (size_t i = 0; i < 6; i++) cout << a[i] << " ";
     cout << endl;
@@ -119,6 +120,8 @@ void HeapTest()
     heap.Insert(8);
     heap.Insert(9);
 
+    heap.Print();
+    heap.ExtractHead();
     heap.Print();
 }
 

@@ -1,3 +1,4 @@
+#pragma once
 
 template <typename T>
 class Heap
@@ -21,6 +22,21 @@ public:
         }
     }
 
+    T ExtractHead()
+    {
+        if (_size == 0)
+            throw std::exception();
+
+        T head = _elements[1];
+
+        _elements[1] = _elements[_size];
+        _size--;
+
+        bubble_down(1);
+
+        return head;
+    }
+
     void Print()
     {
         for (int i = 1; i < _size + 1; i++)
@@ -40,7 +56,10 @@ private:
         return position / 2;
     }
 
-    int child(int position) { return 2 * position; }
+    int child(int position)
+    {
+        return 2 * position;
+    }
 
     T remove_root()
     {
@@ -59,18 +78,45 @@ private:
 
     void bubble_down(int position)
     {
+        int childPos = child(position);
 
+        if (childPos > _size)
+            return;
+
+        int minPos = childPos;
+
+        for (int i = 0; i <= 1; i++)
+        {
+            if (childPos + i <= _size)
+            {
+                if (_elements[childPos + i] < _elements[minPos])
+                {
+                    minPos = childPos + i;
+                }
+            }
+        }
+
+        if (minPos != position)
+        {
+            swap(position, minPos);
+            bubble_down(minPos);
+        }
+    }
+
+    void swap(int p1, int p2)
+    {
+        T tmp = _elements[p1];
+        _elements[p1] = _elements[p2];
+        _elements[p2] = tmp;
     }
 
     void bubble_up(int position)
     {
         if (parent(position) == -1) return;
 
-        if (_elements[parent(position)] < _elements[position])
+        if (_elements[parent(position)] > _elements[position])
         {
-            T tmp = _elements[parent(position)];
-            _elements[parent(position)] = _elements[position];
-            _elements[position] = tmp;
+            swap(position, parent(position));
 
             bubble_up(parent(position));
         }

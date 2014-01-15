@@ -1,4 +1,5 @@
 #include "Queue.h"
+#include "Heap.h"
 
 template <typename T>
 void merge(T* array, size_t low, size_t middle, size_t high)
@@ -59,5 +60,24 @@ void SelectionSort(T* array, size_t length)
         tmpSwap = array[i];
         array[i] = array[idxMin];
         array[idxMin] = tmpSwap;
+    }
+}
+
+template <typename T>
+void HeapSort(T* array, size_t length)
+{
+    if (length <= 1)
+        return;
+
+    Heap<T> heap;
+
+    for (size_t i = 0; i < length; i++)
+    {
+        heap.Insert(array[i]);
+    }
+
+    for (size_t i = 0; i < length; i++)
+    {
+        array[i] = heap.ExtractHead();
     }
 }

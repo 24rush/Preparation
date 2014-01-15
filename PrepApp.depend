@@ -27,3 +27,39 @@
 1389538366 /home/alin/Desktop/Prep/PrepApp/BinarySearchTree.h
 	<iostream>
 
+1389219345 source:/home/alin/Desktop/Preparation/HashTable.cpp
+	"HashTable.h"
+
+1389218056 /home/alin/Desktop/Preparation/HashTable.h
+	<cstring>
+	<iostream>
+
+1389817835 source:/home/alin/Desktop/Preparation/main.cpp
+	<iostream>
+	<stdio.h>
+	"assert.h"
+	"HashTable.h"
+	"SimpleLinkedList.h"
+	"Stack.h"
+	"Queue.h"
+	"BinarySearchTree.h"
+	"Sorting.h"
+	"Heap.h"
+
+1389393924 /home/alin/Desktop/Preparation/SimpleLinkedList.h
+	<iostream>
+
+1389391341 /home/alin/Desktop/Preparation/Stack.h
+	<iostream>
+
+1389640293 /home/alin/Desktop/Preparation/Queue.h
+	<iostream>
+
+1389636503 /home/alin/Desktop/Preparation/BinarySearchTree.h
+	<iostream>
+
+1389731810 /home/alin/Desktop/Preparation/Sorting.h
+	"Queue.h"
+
+1389817869 /home/alin/Desktop/Preparation/Heap.h
+
